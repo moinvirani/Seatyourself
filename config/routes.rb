@@ -1,8 +1,7 @@
 Seatyourself::Application.routes.draw do
-  get "restaurant/index"
-  get "restaurant/show"
-  get "restaurant/new"
-  get "restaurant/edit"
+
+  resources :restaurant
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
