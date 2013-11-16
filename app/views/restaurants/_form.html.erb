@@ -1,10 +1,30 @@
 <%= form_for(@restaurant) do |f| %>
 
-
 <div class="field">
-	<%= f.label :name %> <br>
+	<%= f.label "Restaurant Name" %> <br>
 	<%= f.text_field :name %>
 </div>
+
+
+<div class="field">
+	<%= f.label :email_address %> <br>
+	<%= f.text_area :email %>
+</div>
+
+<div class="field">
+	<%= f.label :neighbourhood %> <br>
+	<%= f.text_area :neighbourhood %>
+</div>
+
+<p>
+             <label>Price Range:</label>
+             <select id = "myList">
+               <option value = "1">$</option>
+               <option value = "2">$$</option>
+               <option value = "3">$$$</option>
+               <option value = "4">$$$$</option>
+             </select>
+          </p>
 
 <div class="field">
 	<%= f.label :description %> <br>
@@ -12,8 +32,8 @@
 </div>
 
 <div class="field">
-	<%= f.label :price_in_cents %> <br>
-	<%= f.number_field :price_in_cents %>
+	<%= f.label :Price_range %> <br>
+	<%= f.text_field :price %>
 </div>
 
 <div class="action">

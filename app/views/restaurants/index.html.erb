@@ -4,11 +4,13 @@
 
 <%= link_to "Add a New Restaurant", new_restaurant_path  %>
 
-	<%= @restaurants.each do |restaurant| %>
+	<% @restaurants.each do |restaurant| %>
 	<ul>
-		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %></li>
+		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> <br>
+			<%= restaurant.price %>
+			
+		</li>	
 		
-			<li><%= restaurant.hours %></li>
 	</ul>
 	
 	<% end %>
