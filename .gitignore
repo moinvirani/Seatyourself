@@ -15,4 +15,6 @@
 /log/*.log
 /tmp
 
+# Ignore sorcery.rb for API 
+/config/initializers/sourcery.rb
 
