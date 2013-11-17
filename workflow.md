@@ -37,4 +37,6 @@ Models:
 
 rails g model Reservation begin_time:datetime end_time:datetime restaurant:references user:references notes:text
 
+<!-- Categories -->
+
 

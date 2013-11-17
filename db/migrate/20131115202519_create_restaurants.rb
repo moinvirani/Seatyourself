@@ -11,7 +11,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :address
       t.string :phone
       t.references :category
-      t.integer :capacity
+      t.integer :capacity, :default => 100
 
       t.timestamps
     end

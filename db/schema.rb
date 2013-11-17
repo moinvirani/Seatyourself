@@ -26,10 +26,10 @@ ActiveRecord::Schema.define(version: 20131117012747) do
 
   create_table "reservations", force: true do |t|
     t.datetime "begin_time"
-    t.datetime "end_time"
     t.integer  "restaurant_id"
     t.integer  "user_id"
     t.text     "notes"
+    t.integer  "people",        default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20131117012747) do
     t.string   "address"
     t.string   "phone"
     t.integer  "category_id"
-    t.integer  "capacity"
+    t.integer  "capacity",      default: 100
     t.datetime "created_at"
     t.datetime "updated_at"
   end
