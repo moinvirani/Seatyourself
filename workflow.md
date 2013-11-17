@@ -22,5 +22,19 @@ rails g model Restaurant name:string neighbourhood:string description:text price
 
 <!-- Users  -->
 
+Controllers for:
+- users
+- user_sessions
+- oauths (generated with sorcery)
+
+Models:
+- user
+- authentication (sorcery)
+
+<!-- Reservations -->
+
+Models:
+
+rails g model Reservation begin_time:datetime end_time:datetime restaurant:references user:references notes:text
 
 

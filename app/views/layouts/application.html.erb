@@ -9,15 +9,23 @@
 
 <body>
 <h1><%= link_to "Seat Yourself", root_path %></h1>
-	<div class="nav">
+<nav>
+	<ul>
+		<li><%= link_to "Restaurants", restaurants_path %></li>
+		<li><%= link_to "My Reservations", current_user %></li>
+	</ul>
+</nav>
+
+	<section id="login">
 		<% if current_user %>
-		<%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-		<%= link_to "Logout", :logout, method: :post %>
+		You are signed in as <%= current_user.name %>.
+		<%# link_to "Edit Profile", edit_user_path(current_user.id) %>
+		<%= link_to "Sign out", :logout, method: :post %>
 		<% else %>
-		<%= link_to "Register", new_user_path %> ||
-		<%= link_to "Login", :login %>
+		<%= link_to "Sign up", new_user_path %> ||
+		<%= link_to "Log in", :login %>
 		<% end %>
-	</div>
+	</section>
 
 	<div>
 		<p id="notice"><%= flash[:notice] %></p>

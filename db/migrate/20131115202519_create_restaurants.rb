@@ -10,10 +10,11 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :hours
       t.string :address
       t.string :phone
-      t.string :category
+      t.references :category
       t.integer :capacity
 
       t.timestamps
     end
+    add_index :restaurants, :category_id
   end
 end
