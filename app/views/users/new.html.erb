@@ -1,5 +1,13 @@
 <h1>New user</h1>
 
+
+<div>
+	
+<%= link_to 'Register with Facebook', auth_at_provider_path(:provider => :facebook) %>
+</div>
+
+<p>OR</p>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', root_path %>

@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20131116081659) do
     t.string   "email"
     t.string   "crypted_password"
     t.string   "salt"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
