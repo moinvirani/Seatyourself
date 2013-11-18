@@ -1,12 +1,12 @@
-
-	
-<h1>Welcome to SeatYourself</h1>
+<h1>List of Restaurants</h1>
 
 <%= link_to "Add a New Restaurant", new_restaurant_path  %>
 
 	<% @restaurants.each do |restaurant| %>
 	<ul>
 		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> <br>
+			<%= restaurant.category %>
+			<%= restaurant.neighbourhood %>
 			<%= restaurant.price %>
 			
 		</li>	

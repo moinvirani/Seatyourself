@@ -7,26 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 
-<body>
-<h1><%= link_to "Seat Yourself", root_path %></h1>
-<nav>
-	<ul>
-		<li><%= link_to "Restaurants", restaurants_path %></li>
-		<li><%= link_to "My Reservations", current_user %></li>
-	</ul>
-</nav>
-
-	<section id="login">
-		<% if current_user %>
-		You are signed in as <%= current_user.name %>.
-		<%# link_to "Edit Profile", edit_user_path(current_user.id) %>
-		<%= link_to "Sign out", :logout, method: :post %>
-		<% else %>
-		<%= link_to "Sign up", new_user_path %> ||
-		<%= link_to "Log in", :login %>
-		<% end %>
-	</section>
-
+<body class="landing site">
+	  <%= render 'layouts/header' %>
 	<div>
 		<p id="notice"><%= flash[:notice] %></p>
 		<p id="alert"><%= flash[:alert] %></p>

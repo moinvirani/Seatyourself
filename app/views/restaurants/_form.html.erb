@@ -8,33 +8,65 @@
 
 <div class="field">
 	<%= f.label :email_address %> <br>
-	<%= f.text_area :email %>
+	<%= f.text_field :email %>
 </div>
+
 
 <div class="field">
-	<%= f.label :neighbourhood %> <br>
-	<%= f.text_area :neighbourhood %>
+	<%= f.label :address %> <br>
+	<%= f.text_field :address %>
 </div>
 
-<p>
-             <label>Price Range:</label>
-             <select id = "myList">
-               <option value = "1">$</option>
-               <option value = "2">$$</option>
-               <option value = "3">$$$</option>
-               <option value = "4">$$$$</option>
-             </select>
-          </p>
+
+
+<div class="field">
+	<%= f.label :phone_number %> <br>
+	<%= f.text_field :phone %>
+</div>
+
+
+ <label>Category:</label>  <br>
+ <select>
+        <option value="1" selected>any food</option>
+        <option value="2">Indian</option>
+        <option value="3">French</option>
+        <option value="4">Japanese</option>
+        <option value="2">Italian</option>
+    </select>
+
+			<br>
+
+ <label>Neighbourhood:</label> <br>
+ <select>
+        <option value="1" selected>Downtown</option>
+        <option value="2">Markham</option>
+        <option value="3">Scarborough</option>
+        <option value="4">Queens West</option>
+        <option value="2">Little Italy</option>
+    </select>
+	<br>
+
+ <label>Price Range:</label> <br>
+ <select>
+        <option value="1" selected>$</option>
+        <option value="2">$$</option>
+        <option value="3">$$$</option>
+        <option value="4">$$$$</option>
+    </select>
+
+     <div class="field">
+    <%= f.label :capacity %> <br>
+    <%= f.number_field :capacity, :min => 1, :max => 500 %>
+    <%# note: validations should always be in the model. the min/max set here should be changed to use the same values set there %>
+  </div>
+
 
 <div class="field">
 	<%= f.label :description %> <br>
 	<%= f.text_area :description %>
 </div>
 
-<div class="field">
-	<%= f.label :Price_range %> <br>
-	<%= f.text_field :price %>
-</div>
+
 
 <div class="action">
 	<%= f.submit %>

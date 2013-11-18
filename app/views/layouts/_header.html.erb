@@ -1,0 +1,23 @@
+<div class="navbar">
+    <div class="container">
+        <h1><%= link_to "Seat Yourself", root_path, class: "navbar-brand" %></h1>
+       <!--  <a class="navbar-brand" href="/"><img src="assets/img/logo.png" width="60" alt="Inc"></a> -->
+        <ul class="nav navbar-nav">
+            
+                <li><%= link_to "Restaurants", restaurants_path, class: "nav-about" %></li>
+                <% if current_user %>
+                <li><%= link_to "My Reservations", current_user, class: "nav-about" %></li>
+                <li class="sep"></li> 
+                <li><%= link_to current_user.name, edit_user_path(current_user.id), class: "nav-about" %></li>
+                <% end %>
+                    
+                <% if current_user %>
+                <li class="signup"><%= link_to "Sign out", :logout, method: :post, class: "btn signup-link"%></li>
+                <% else %>
+                <li><%= link_to "Log in", :login, class: "nav-about" %></li>
+                <li class="sep"></li> 
+                <li class="signup"><%= link_to "Sign up", new_user_path, class: "btn signup-link" %></li> 
+                <% end %>    
+        </ul>
+    </div>
+</div>
