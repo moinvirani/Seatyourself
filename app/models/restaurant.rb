@@ -17,5 +17,9 @@ class Restaurant < ActiveRecord::Base
     20  # 8:00 PM
   end
 	
+  has_attached_file :photo, styles: {
+    thumb: '200x200#',
+    large: '400x600>'
+  }
   
 end

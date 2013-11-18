@@ -6,6 +6,7 @@ gem 'rails', '4.0.1'
 gem 'bootstrap-sass'
 gem 'pg'
 gem 'sorcery'
+gem "paperclip"
 
 group :development, :test do
   # gem 'sqlite3', '1.3.8'

@@ -46,6 +46,10 @@ GEM
       timers (~> 1.1.0)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -116,6 +120,11 @@ GEM
       jwt (~> 0.1.4)
       multi_json (~> 1.0)
       rack (~> 1.2)
+    paperclip (3.5.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
     pg (0.17.0)
     polyglot (0.3.3)
     pry (0.9.12.3)
@@ -229,6 +238,7 @@ DEPENDENCIES
   guard-spork
   jbuilder (= 1.0.2)
   jquery-rails (= 3.0.4)
+  paperclip
   pg
   rails (= 4.0.1)
   rails_12factor (= 0.0.2)

@@ -1,17 +1,21 @@
+	
 <h1>List of Restaurants</h1>
 
-<%= link_to "Add a New Restaurant", new_restaurant_path  %>
-
-	<% @restaurants.each do |restaurant| %>
-	<ul>
-		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> <br>
-			<%= restaurant.category %>
+<%= link_to "Add a New Restaurant", new_restaurant_path %>
+<br>
+<br>
+	<div class="wrapper">
+		<% @restaurants.each do |restaurant| %>
+		<div class="pin">
+			<%= link_to image_tag(restaurant.photo.url(:thumb)), "/restaurants/#{restaurant.id}" %>
+		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> 
 			<%= restaurant.neighbourhood %>
-			<%= restaurant.price %>
+			<%= restaurant.address %>
+
 			
-		</li>	
-		
-	</ul>
+		</div>	
+		<% end %>
+	</div>
 	
-	<% end %>
+	
 
