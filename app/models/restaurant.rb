@@ -6,7 +6,7 @@ class Restaurant < ActiveRecord::Base
 	validates :name, :description, :address, :phone, :presence => true
 	# validates :integer, numericality: {only_integer: true}
 	
-  belongs_to :category #not being used yet
+  belongs_to :category 
   has_many   :reservations
 
   def opening_hour
@@ -21,5 +21,10 @@ class Restaurant < ActiveRecord::Base
     thumb: '200x200#',
     large: '400x600>'
   }
-  
+
+  # def availibilty?
+  #   peeps = self.reservations.where 
+  #   (start_time: reservation.start_time).sum(:people)
+  #   (peeps + reservation.people) < capacity
+  # end
 end

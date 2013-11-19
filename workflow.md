@@ -43,6 +43,6 @@ rails g controller reservations
 
 <!-- Categories -->
 
-rails g model Cateogies name:string
+rails g model Categories name:string
 
 

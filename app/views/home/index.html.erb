@@ -1,8 +1,11 @@
 <header>
+	<div class="container">
+			</div>
+        
         <div class="bg"></div>
-        <div class="container">
-		            <h1>Make a reservation today! </h1>
-
+        <div class="container">       
+		 <div>
+		 	 <h1>Make a reservation today! </h1>
 		<form >
 		    I feel like eating 
 		    <select>
@@ -28,10 +31,11 @@
 		        <option value="3">at 9 p.m.</option>
 		    </select> <br> <br>
 		    in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
-		      
-			</form>
-		<div class="#">
+			</form> <br><br>
+			  <div class="#">
 <%= link_to "Find a restaurant", restaurants_path, class: "btn btn-primary signup-link" %>
 		    </div>
+				</div>		
         </div>
+        
     </header>

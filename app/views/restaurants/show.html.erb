@@ -1,4 +1,12 @@
 <h1>Reserve at <%= @restaurant.name %> </h1>
 
+<div class="show_restaurant_photo">
+        <%= image_tag @restaurant.photo.url(:large) %>
+</div>
 
-
+<div class="show_full_details">
+  <div class="left_details">
+    <span class="description_title">Restaurant Summary:</span>
+    <%= @restaurant.category.name %>
+  </div>
+</div>

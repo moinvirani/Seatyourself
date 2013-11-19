@@ -2,6 +2,12 @@ Seatyourself::Application.routes.draw do
 
 
 
+  get "categories/index"
+  get "categories/create"
+  get "categories/show"
+  get "categories/edit"
+  get "categories/destroy"
+  get "categories/update"
   get "home/index"
     # config/routes.rb
   post "oauth/callback" => "oauths#callback"

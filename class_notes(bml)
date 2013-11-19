@@ -1,0 +1,6 @@
+Bitmaker Labs class notes (Nov 19th)
+Reservation:
+
+rails g model reservation user_id: integer restaurant_id:integer
+
+

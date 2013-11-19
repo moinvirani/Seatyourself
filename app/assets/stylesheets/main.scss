@@ -1673,7 +1673,7 @@ body.landing header {
     position: relative;
 }
 body.landing header .bg {
-    background: #f2f2f2 url('../img/vacay2.jpg') no-repeat;
+    background: #f2f2f2 url('../img/thai.png') repeat;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -1688,7 +1688,7 @@ body.landing header .container {
     position: relative;
 }
 body.landing header .container>div {
-    margin-top: 30px;
+    margin-top: 400px;
 }
 body.landing header .container>div a {
     color: #fff;
@@ -1847,6 +1847,17 @@ footer {
     padding: 50px 0;
     color: #777;
     border-top: 1px solid #ddd;
+    small {
+        float: left;
+    }
+    ul{
+        float: right;
+        list-style: none;
+        li{
+            float:left;
+            margin-left: 10px;
+        }
+    }
 }
 footer a, footer span {
     color: #777;
@@ -1949,3 +1960,6 @@ body.landing .main p {
 }
 
 /* End of CSS for pins  */
+
+
+

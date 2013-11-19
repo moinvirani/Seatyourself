@@ -9,6 +9,7 @@
 		<div class="pin">
 			<%= link_to image_tag(restaurant.photo.url(:thumb)), "/restaurants/#{restaurant.id}" %>
 		<li><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %> 
+			<%= restaurant.category.name %>
 			<%= restaurant.neighbourhood %>
 			<%= restaurant.address %>
 

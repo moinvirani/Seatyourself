@@ -24,30 +24,21 @@
 </div>
 
 
- <label>Category:</label>  <br>
- <select>
-        <option value="1" selected>any food</option>
-        <option value="2">Thai</option>
-        <option value="3">Indian</option>
-        <option value="4">French</option>
-        <option value="2">Japanese</option>
-        <option value="2">Italian</option>
-    </select>
+ <label>Category:</label> <br>
+ <%= collection_select(:restaurant, :category_id, Category.all, :id, :name, :prompt => 'Select One')  %>
+
+ <%# f.select :category, [ 'Thai', 'Indian', 'Chinese', 'French', 'Italian', 'Canadian', 'Japanese' ], :prompt => 'Select One' %>
 
 			<br>
 
  <label>Neighbourhood:</label> <br>
- <%= f.select :neighbourhood, [ 'Markham', 'Work', 'Office', 'Home', 'Other' ], :prompt => 'Select One' %>
+ <%= f.select :neighbourhood, [ 'Downtown', 'Markham', 'Scarbarough', 'Missisagaua', 'Queens Street ' ], :prompt => 'Select One' %>
  
 <br>
 
  <label>Price Range:</label> <br>
- <select>
-        <option value="1" selected>$</option>
-        <option value="2">$$</option>
-        <option value="3">$$$</option>
-        <option value="4">$$$$</option>
-    </select>
+ <%= f.select :price, [ '$', '$$', '$$$', '$$$$', 'Bitcoin' ], :prompt => 'Select One' %>
+ 
 
      <div class="field">
     <%= f.label :capacity %> <br>
