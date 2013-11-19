@@ -1,0 +1,11 @@
+<%= form_for [@restaurant, @reservation], html: { multipart: true } do |f| %>
+<br>
+<div class="field">
+  <%= f.label "Make a reservation" %> <br>
+  
+</div>
+
+<div class="action">
+  <%= f.submit %>
+</div>
+<% end %>
