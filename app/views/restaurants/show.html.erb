@@ -1,11 +1,9 @@
-<h1>Reserve at <%= @restaurant.name %> </h1>
+<h2><%= @restaurant.name %> </h2>
 
 <div class="col-xs-5">
         <%= image_tag @restaurant.photo.url(:large) %>
-</div>
 
-<div class="show_full_details">
-  <div>
+  <div class="col-xs-12" >
     <h4>Restaurant Summary:</h4> <br>
    Type of Food: <%= @restaurant.category.name %> <br>
    Neighbourhood: <%= @restaurant.neighbourhood %> <br>
@@ -14,13 +12,11 @@
    Description: <%= @restaurant.description %> <br>
     Price: <%= @restaurant.price %> <br>
   </div>
-
-
 </div>
-  
+
+<div class="col-xs-5">
   <div class="reservation">
+    <h4> Make a Reservation for <%= @restaurant.name %> </h4>
     <%= render "reservations/form"%>
   </div>
-
-<br>
-  <%= link_to "Click here to go back", restaurants_path, class: "h5"  %>
+</div>
