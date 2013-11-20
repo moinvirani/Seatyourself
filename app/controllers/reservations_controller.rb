@@ -2,14 +2,15 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    # @restaurant = Restaurant.find(params[:restaurant_id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservation.user_id = current_user.id
     # @reservation = @restaurant.reservations.build
     if @reservation.save
       redirect_to restaurants_path(@restaurant)
-      # do something
+      
     else
       render :action => :show, notice: "Restaurant is on fire!!"
-      # soemthon
+      
     end
   end
  

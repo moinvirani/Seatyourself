@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Profile Page:</h1>
+<div>
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+</div>
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -9,10 +16,14 @@
 </p>
 
 <div>
-  <p>My Reservations:</p>
-  <%= @reservation.user_id %>
+  <h2>My Reservations:</h2>
+  <% @user.reservations.each do |reservation| %> 
+  Reservation Time: <%= reservation.begin_time %> <br>
+  Number of Guests: <%= reservation.people %> <br>
+  Special Instructions: <%= reservation.notes %>
+  <% end %>
 </div>
 
-
+<br>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
