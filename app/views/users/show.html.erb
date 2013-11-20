@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+  <br>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<div>
+  <p>My Reservations:</p>
+  <%= @reservation.user_id %>
+</div>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
