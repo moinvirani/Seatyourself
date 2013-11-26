@@ -237,22 +237,22 @@ DEPENDENCIES
   bootstrap-sass
   capybara (= 2.1.0)
   childprocess
-  coffee-rails (= 4.0.1)
+  coffee-rails
   debugger
   factory_girl_rails
   guard-rspec
   guard-spork
-  jbuilder (= 1.0.2)
-  jquery-rails (= 3.0.4)
+  jbuilder
+  jquery-rails
   paperclip
   pg
   rails (= 4.0.1)
   rails_12factor (= 0.0.2)
   rspec-rails
-  sass-rails (= 4.0.1)
+  sass-rails
   sdoc (= 0.3.20)
-  selenium-webdriver (= 2.35.1)
+  selenium-webdriver
   sorcery
   spork-rails
-  turbolinks (= 1.1.1)
-  uglifier (= 2.1.1)
+  turbolinks
+  uglifier
