@@ -1,27 +1,31 @@
-<%= form_for([@restaurant, @review]) do |f|  %>
-  <% if @review.errors.any? %>
-  <div id="error_explaination">
-    <h2><%= pluralize(@review.errors.count, "error") %> prohobited this review</h2>
+<% if current_user %>
 
-    <ul>
-      <% @review.errors.full_message.each do |msg| %>
-      <li><%= msg %></li>
-      <% end %>
-    </ul>
-  </div>
-<%= end %>
-<div class="field">
-  <%= f.label :comment %> <br>
-  <%= f.text_area :comment %>
-</div>
-<div class="actions">
-  <%= f.submit %>
-</div>
-<% end %>
+  <%= form_for [@restaurant, @review] do |f|  %>
+    <% if @review.errors.any? %>
+      <div id="error_explaination">
+        <h2>
+          <%= pluralize(@review.errors.count, "error") %> prohobited this review
+        </h2>
+
+        <ul>
+          <% @review.errors.full_message.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :comment %> <br>
+      <%= f.text_area :comment %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
 
 <% else %>
-<p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
+  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
 <% end %>
 
-<%= link_to 'Edit', edit_product_path(@restaurant) %> |
+<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

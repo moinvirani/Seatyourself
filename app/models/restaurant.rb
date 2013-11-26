@@ -8,6 +8,7 @@ class Restaurant < ActiveRecord::Base
 	
   belongs_to :category 
   has_many   :reservations
+  has_many    :reviews  
 
   def opening_hour
     11 # 11:00 AM

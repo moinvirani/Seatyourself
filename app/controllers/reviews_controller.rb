@@ -1,12 +1,14 @@
 class ReviewsController < ApplicationController
-  
+  before_filter :require_login, :only => [:edit, :create, :show, :update, :destroy]
+
   def show
     @review = Review.find(params[:id])
   end
 
-  def new
+  def create
+    @restaurant = Restaurant.find(params[:restaurant_id])
     @review = @restaurant.reviews.build(review_params)
-    @review.user.id = current_user.id
+    @review.user_id = current_user.id 
 
     if @review.save
       redirect_to restaurants_path, notice: 'Review created successfully'
@@ -21,12 +23,11 @@ class ReviewsController < ApplicationController
   end
 
   private
-
   def load_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   def review_params
-    params.require[:review].permit(:comments, :product_id)
+    params.require(:review).permit(:comment, :restaurant_id)
   end
 end

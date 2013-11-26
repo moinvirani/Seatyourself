@@ -13,9 +13,10 @@ Seatyourself::Application.routes.draw do
   resources :users
   resources :restaurants do
     resources :reservations
+    resources :reviews
   end
   resources :categories
-  resources :reviews
+  #resources :reviews
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
