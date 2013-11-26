@@ -43,6 +43,11 @@ rails g controller reservations
 
 <!-- Categories -->
 
-rails g model Categories name:string
+rails g model Category name:string
 
+<!-- Reviews -->
+
+rails g controller reviews index show new edit --no-test-framework
+
+rails g model Review comment:text restaurant_id:integer user_id:integer
 

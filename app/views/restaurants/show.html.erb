@@ -20,3 +20,23 @@
     <%= render "reservations/form"%>
   </div>
 </div>
+
+<div class="col-xs-10">
+    <p>Reviews for <%= @restaurant.name %></p>
+    <%= @restaurant.reviews.each do |review| %>
+      
+      <div class="review">
+        <p>
+          <%= review.comment %>
+          <br>
+          <% if review.user != nil %>
+          <em> by <%= review.user.name %></em>
+          Added on: <%= review.created_at %>
+          <% end %>
+        </p>
+      </div>
+    <% end %>
+
+    <h4>New Review</h4>
+    <%= render "reviews/form" %>
+</div>

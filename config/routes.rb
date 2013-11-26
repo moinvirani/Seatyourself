@@ -1,8 +1,5 @@
 Seatyourself::Application.routes.draw do
 
-
-
-
   get "home/index"
     # config/routes.rb
   post "oauth/callback" => "oauths#callback"
@@ -18,6 +15,7 @@ Seatyourself::Application.routes.draw do
     resources :reservations
   end
   resources :categories
+  resources :reviews
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
